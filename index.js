@@ -32,7 +32,7 @@ function fetchFeed(url, cb){
 }
 
 
-app.get('/', (req, res) => {
+app.get('/podcasts', (req, res) => {
 
 fetchFeed('https://feeds.soundcloud.com/users/soundcloud:users:1325580648/sounds.rss', function(err, data){
     if (err){
