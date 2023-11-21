@@ -3,6 +3,7 @@ const app = express();
 var _request = require('request');
 var _xml2js = require('xml2js').parseString;
 const port = process.env.PORT || 3001;
+var cors = require('cors');
 
 
 function fetchFeed(url, cb){
@@ -31,6 +32,7 @@ function fetchFeed(url, cb){
     });
 }
 
+app.use(cors());
 
 app.get('/podcasts', (req, res) => {
 
